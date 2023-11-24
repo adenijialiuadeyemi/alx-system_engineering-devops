@@ -1,1 +1,1 @@
-This is an ALX project on loops_conditions_and_parsing
+This is an ALX project on loops condition and parsing
