@@ -34,20 +34,20 @@ defaults
 	errorfile 504 /etc/haproxy/errors/504.http
 
 # start of parameters for adenijialiuadeyemi.tech
-frontend adenijialiuadeyemi.tech-http-frontend
+frontend adenijialiuadeyemi-http-frontend
 	bind	 *:80
 	http-request set-header X-Forwarded-Proto http
-	default_backend	 adenijialiuadeyemi.tech-backend
+	default_backend	 adenijialiuadeyemi-backend
 
 
-frontend  adenijialiuadeyemi.tech-https-frontend
+frontend  adenijialiuadeyemi-https-frontend
 	bind *:443 ssl crt /etc/ssl/www.adenijialiuadeyemi.tech.pem
 	http-request set-header X-Forwarded-Proto https
-        default_backend adenijialiuadeyemi.tech-backend
+        default_backend adenijialiuadeyemi-backend
 
 
-backend adenijialiuadeyemi.tech-backend
+backend adenijialiuadeyemi-backend
         balance roundrobin
         server 914-web-01 18.210.10.116:80 check
         server 6955-web-02 107.23.96.211:80 check
-# end of parameters
+# endof parameters
